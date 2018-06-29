@@ -1,0 +1,172 @@
+
+.antenaTopCircle{
+  background: gold;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  margin-left: 632px;
+  margin-top:140px;
+  animation: pulseTop 1s infinite;
+}
+
+.antena{
+  height: 40px;
+  background: grey;
+  width:5px;
+  margin-left: 640px;
+  margin-top:0px;
+  position: relative;
+}
+
+.mainSquare {
+    width: 200px;
+    height: 300px;
+    /* background: #1C3047; */
+    background: linear-gradient(to bottom, #1C3047 0%, #398191 100%);
+    margin-left: 550px;
+    margin-top: 0px;
+    position: absolute;
+    animation: myfirst 5s 2;
+    animation-direction: alternate;
+}
+.arms{
+  display: inline-block;
+  display: flex;
+  margin-left: 520px;
+  /* animation: sk-rotateplane 3s infinite ease-out; */
+}
+
+.arm1{
+  width:20px;
+  height: 120px;
+  background: #386D8C;
+
+}
+.arm2{
+  width:20px;
+  height: 120px;
+  background: #386D8C;
+  margin-left: 220px;
+  margin-bottom: 0px;
+}
+
+.square_small{
+  width: 100px;
+  height: 60px;
+  background: #D1C492;
+  margin-left: 50px;
+  margin-top: 20px;
+}
+/******change opacity of the middle square*****************  */
+@keyframes square_small {
+  0%, 10%  {opacity: 3}
+   25%, 85% {opacity: .5}
+   100%     {opacity: 3}
+ }
+ .square_small {
+    animation: square_small 2s ease infinite;
+  }
+  /**********************************  */
+.movingSq1{
+  background: yellow;
+  /* border-radius: 50%; */
+  height: 15px;
+  width: 15px;
+  animation: 4s linear 0s infinite alternate moveSquare;
+}
+.head{
+  background: #D5CC91;
+  /* border-radius: 50%; */
+  height: 110px;
+  width: 110px;
+  margin-left: 590px;
+  margin-top:0px;
+}
+/* ********FLIP THE HEAD******************************** */
+.head:hover {
+    transform:  rotateY(180deg) rotate(10deg); /* notice the order */
+}
+/***********************************************  */
+
+/* eyes movement */
+@keyframes eyemove{
+      0%   {transform: translate(-5px,-1px)}
+      50%   {transform: translate(7px,0)}
+    100%  {transform: translate(-5px,-1px)}
+  }
+
+.eyes{
+display: inline-block;
+display: flex;
+ animation:eyemove 3s linear infinite; /* eyes movement */
+
+}
+.eye1{
+  background: blue;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  margin-left: 10px;
+  margin-bottom: 50px;
+  margin-top: 10px;
+  animation: pulse 5s infinite;
+}
+.eye2{
+  background: blue;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  margin-left: 38px;
+  margin-top: 10px;
+  animation: pulse 5s infinite;
+}
+.mouth{
+  height:9px;
+  width: 25px;
+  margin-left: 40px;
+  margin-top: 5px;
+  background: red;
+  animation: mouthcolchanger 1s infinite;
+}
+body{
+background: lightgrey;
+}
+/* ******move ROBO */
+.mainRapper{
+animation: 8s linear 0s infinite alternate moveRobo;
+}
+
+@keyframes mouthcolchanger {
+  0% {
+    background-color: red;
+  }
+  100% {
+    background-color: #000;
+    height:12px;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    background-color: blue;
+  }
+  100% {
+    background-color: grey;
+  }
+}
+@keyframes pulseTop {
+  0% {
+    background-color: yellow;
+  }
+  100% {
+    background-color: orange;
+  }
+}
+@keyframes moveSquare {
+  from { margin-left: 0%; } to { margin-left: 85%;
+  }
+}
+  @keyframes moveRobo {
+    from { margin-left: -40%; } to { margin-left: 30%;
+    }
+  }
